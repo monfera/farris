@@ -1,4 +1,4 @@
-import Farris from '../../src';
+import Farris from '../../src/index';
 
 describe('Farris', () => {
 

@@ -1,7 +1,8 @@
+import Farris from '../../src/index';
+
 describe('Farris', () => {
 
 	it('should be a function', () => {
-		expect(123).to.eql(123);
+		expect(Farris).to.be.a.object;
 });
-
 });
