@@ -1,5 +1,7 @@
 var buble = require('rollup-plugin-buble');
 var nodeResolve = require('rollup-plugin-node-resolve');
+var typescript = require('rollup-plugin-typescript');
+var stub = require('rollup-plugin-stub');
 var multi = require('rollup-plugin-multi-entry').default;
 
 module.exports = function(config) {
@@ -27,7 +29,9 @@ module.exports = function(config) {
 					nodeResolve({
 						jsnext: true,
 						main: true
-					})
+					}),
+					stub(),
+					typescript()
 				]
 			},
 			bundle: {

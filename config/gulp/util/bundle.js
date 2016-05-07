@@ -48,7 +48,7 @@ function bundle(format, entry) {
 			commonjs(),
 			stub(),
 			typescript(),
-			filesize(),
+			filesize()
 		],
 		format: format,
 		moduleName: 'Farris'

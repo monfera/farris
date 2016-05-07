@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ES2015 boilerplate for creating libraries with the newest front-end technologies",
   "main": "index.js",
   "scripts": {
@@ -23,23 +23,20 @@
     "boilerplate",
     "es2015",
     "rollup",
-    "rewire",
     "karma",
     "mocha",
-    "preset",
     "workflow",
-    "babel",
+    "buble",
     "es6",
     "isparta",
     "rimraf",
     "gulp",
-    "livereload",
     "chai",
     "sinon",
     "webpack",
     "eslint",
     "bundle",
-    "modules"
+    "nodejs"
   ],
   "author": "Kflash",
   "license": "MIT",
