@@ -1,0 +1,15 @@
+#
+# Build configuration for Circle CI
+#
+
+machine:
+  node:
+    version: 6
+
+# From for occasional ELIFECYCLE errors compiling microtime
+# https://discuss.circleci.com/t/using-node-js-4-0-on-circleci/26
+dependencies:
+   pre:
+     - npm install -g npm
+   override:
+      - npm install
