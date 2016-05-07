@@ -9,13 +9,13 @@ module.exports = function(config) {
 
 		files: [
 			'test/browser-tests/**/*spec.browser.js',
-			'test/node-tests/**/*spec.server.js'
+			'test/node-tests/**/*spec.node.js'
 		],
 
 		preprocessors: {
 			'src/**/*.js': ['rollup'],
 			'test/browser-tests/**/*spec.browser.js': ['rollup'],
-			'test/node-tests/**/*spec.server.js': ['rollup']
+			'test/node-tests/**/*spec.node.js': ['rollup']
 		},
 
 		rollupPreprocessor: {

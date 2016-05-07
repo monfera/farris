@@ -16,7 +16,7 @@ gulp.task('coverage', (done) => {
 			.pipe(istanbul.hookRequire())
 			.pipe(coveralls())
 			.on('finish', () => {
-				return gulp.src(['config/config.js', 'test/node-tests/**/*spec.server.js'], {
+				return gulp.src(['config/config.js', 'test/browser-tests/**/*spec.browser.js', 'test/node-tests/**/*spec.node.js'], {
 						read: false
 					})
 					.pipe(mocha({
