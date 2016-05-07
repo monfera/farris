@@ -50,3 +50,10 @@ $ npm run build                 # Build a minified and a non-minified version of
 * `gulp watch:browser` - Run all unit tests for browser & watch files for changes
 * `gulp watch:chrome` - Run all unit tests for browser with Chrome & watch files for changes
 * `gulp watch:phantom` - Run all unit tests for browser with PhantomJS & watch files for changes
+
+# Know limitations
+
+Bublé doesn't support import / export. Therefor Babel have been used for the nodeJS tests. This will be fixed ASAP when nodejS supports import / export.
+
+I suggest read the Bublé documentation to get a better understanding about the differences between Bublé and Babel.
+
