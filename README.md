@@ -80,7 +80,7 @@ This library is set up to integrate with Coveralls, and will automatically publi
 
 ## Rollup
 
-Rollup are used as the library bundler. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
+[Rollup](http://rollupjs.org/) are used as the library bundler. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
 
 # Know limitations
 
