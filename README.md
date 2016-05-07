@@ -7,7 +7,7 @@
 
 ## Features
 
-* [Bublé](https://gitlab.com/Rich-Harris/buble) as the ES2015
+* [Bublé](https://gitlab.com/Rich-Harris/buble) as the ES2015 compiler
 * [Rollup](http://rollupjs.org/) for bundling
 * [Stub](https://github.com/eventualbuddha/rollup-plugin-stub) let you stub module exports at runtime when bundling with Rollup.
 * [Eslint](http://eslint.org/) to maintain a consistent code style
@@ -51,9 +51,56 @@ $ npm run build                 # Build a minified and a non-minified version of
 * `gulp watch:chrome` - Run all unit tests for browser with Chrome & watch files for changes
 * `gulp watch:phantom` - Run all unit tests for browser with PhantomJS & watch files for changes
 
+
+## Testing environment
+
+This project uses Mocha to run your unit tests, it uses Karma as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.).
+
+To add a unit test, simply create a `.spec.browser.js` or a `.spec.node.js` file inside the `~../test/browser-tests/` or `~../test/node-tests/` folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
+
+To run unit tests only for the browser ( *client*), or for the server, create either a `~/.spec.browser.js` or `~/spec.node` file inside the same folder.
+
+To run the tests in the project, just simply `gulp test` for both server and client unit tests, or `gulp test:server`. for server or `gulp test:browser`. for browser tests.
+
+To keep watching the common test suites that you are working on, simply do `gulp watch:browser` or `gulp watch:server`.
+
+**Note!** By default all server tests are run with JSDOM
+
+## Sinon
+
+[Sinon.JS](http://sinonjs.org/) is also set up for test doubles - see `BatClass.common.js` for examples of both Sinon and Rewire using ES6 classes.
+
+## Coveralls
+
+This library is set up to integrate with Coveralls, and will automatically publish your coverage report to **coveralls.io** if you have created an account there.
+
+## Bublé
+
+[Bublé](https://gitlab.com/Rich-Harris/buble) is a blazing fast, batteries-included ES2015 compiler. Used to bundle your ES2015 files instead of Babel.
+
+## Rollup
+
+Rollup are used as the library bundler. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
+
 # Know limitations
 
 Bublé doesn't support import / export. Therefor Babel have been used for the nodeJS tests. This will be fixed ASAP when nodejS supports import / export.
 
 I suggest read the Bublé documentation to get a better understanding about the differences between Bublé and Babel.
 
+
+# License
+
+The MIT License (MIT)
+
+Copyright (c) 2016 KFlash
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the 
+Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
