@@ -1,6 +1,7 @@
 ### ES2015 boilerplate for creating libraries with Buble, Rollup and the newest front-end technologies.
 
 [![Build Status](https://travis-ci.org/Kflash/farris.svg?branch=master)](https://travis-ci.org/Kflash/farris)
+[![Circle CI](https://circleci.com/gh/Kflash/farris/tree/master.svg?style=svg)](https://circleci.com/gh/Kflash/farris/tree/master)
 [![npm version](https://badge.fury.io/js/farris.svg)](https://badge.fury.io/js/farris)
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://github.com/kflash/farris/blob/master/LICENSE.md)
 [![npm downloads](https://img.shields.io/npm/dm/farris.svg)](https://www.npmjs.org/package/farris)
