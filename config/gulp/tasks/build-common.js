@@ -8,10 +8,10 @@ import pkg from '../../../package.json';
 // Build a production bundle
 gulp.task('build:common', () => {
 	process.env.NODE_ENV = 'development';
-process.env.min = false;
+	process.env.min = false;
 
-return bundle('cjs', 'src/index.js')
-	.pipe(source(pkg.name + '.cjs.js'))
-	.pipe(buffer())
-	.pipe(gulp.dest('dist'));
+	return bundle('cjs', 'src/index.js')
+		.pipe(source(pkg.name + '.cjs.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('dist'));
 });
