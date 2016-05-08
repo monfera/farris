@@ -5,7 +5,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/Kflash/farris/badge.svg?branch=master)](https://coveralls.io/github/Kflash/farris?branch=master)
 [![npm version](https://badge.fury.io/js/farris.svg)](https://badge.fury.io/js/farris)
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://github.com/kflash/farris/blob/master/LICENSE.md)
-[![npm downloads](https://img.shields.io/npm/dm/farris.svg)](https://www.npmjs.org/package/farris)
 
 ## Features
 
