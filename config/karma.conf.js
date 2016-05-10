@@ -95,8 +95,11 @@ module.exports = function (config) {
 	};
 
 	if (process.env.TRAVIS) {
-		config.browsers = ['Chrome_travis_ci'];
+
 		// Used by Travis to push coveralls info corretly to example coveralls.io
+		config.reporters = ['mocha', 'coverage', 'coveralls'];
+		// Use Chrome as default browser for Travis CIs
+		config.browsers = ['Chrome_travis_ci'];
 		// Karma (with socket.io 1.x) buffers by 50 and 50 tests can take a long time on IEs;-)
 		config.browserNoActivityTimeout = 120000;
 	}
