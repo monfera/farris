@@ -39,13 +39,13 @@ $ npm run build                 # Build a minified and a non-minified version of
 * `npm run lint:src` - lint the source
 * `npm run lint:tests` - lint the unit tests
 * `npm run clean` - remove the coverage report - and the *dist* folder
-* `npm run server:cov` - run Isparta, a code coverage tool
+* `npm run node:cov` - run Isparta, a code coverage tool
 * `npm run test` - runs unit tests for both node and the browser. With Karma as the test runner
 * `npm run test:browser` - runs the unit tests for browser
 * `npm run test:chrome` - runs the unit tests for browser with Chrome
 * `npm run test:node` - runs the unit tests in the node environment
 * `npm run test:all` - runs all unit tests
-* `npm run watch:node` - run all unit tests for server and watch files for changes
+* `npm run watch:node` - run all unit tests in the node environemnt, and watch files for changes
 * `npm run watch:browser` - run all unit tests for browser and watch files for changes
 * `npm run watch:chrome` - run all unit tests for browser with Chrome and watch files for changes
 * `npm run dependencies:check` - shows a list over dependencies with a higher version number then the current one - if any
@@ -57,7 +57,7 @@ This project uses Mocha to run your unit tests, it uses Karma as the test runner
 
 To add a unit test, simply create a `.browser.js` or a `.node.js` file inside the `~../test/browser-tests/` or `~../test/node-tests/` folder. Karma will pick up on these files automatically, and Mocha and Chai will be available within your unit tests without the need to import them.
 
-To run unit tests only for the browser, or for the server, create either a `~/.browser.js` or `~/node` file inside the same folder.
+To run unit tests only for the browser, or in the node environment, create either a `~/.browser.js` or `~/node` file inside the same folder.
 
 To run the tests in the project, just simply `npm run test` for both the browser and node unit tests, or `npm run test:node`. for the node environment or `npm run test:browser`. for browser tests.
 
