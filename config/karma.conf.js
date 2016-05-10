@@ -26,14 +26,13 @@ module.exports = function (config) {
 		// - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
 		// - PhantomJS
 		// - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-		browsers: ['PhantomJS'],
+		browsers: ['Chrome'],
 	    customLaunchers: {
 		    Chrome_travis_ci: {
 			    base: 'Chrome',
 			    flags: ['--no-sandbox']
 		    }
 	    },
-
 		// list of files to exclude
 		exclude: [],
 		preprocessors: {
@@ -97,11 +96,11 @@ module.exports = function (config) {
 	if (process.env.TRAVIS) {
 
 		// Used by Travis to push coveralls info corretly to example coveralls.io
-		config.reporters = ['mocha', 'coverage', 'coveralls'];
+		configuration.reporters = ['mocha', 'coverage', 'coveralls'];
 		// Use Chrome as default browser for Travis CIs
-		config.browsers = ['Chrome_travis_ci'];
+		configuration.browsers = ['Chrome_travis_ci'];
 		// Karma (with socket.io 1.x) buffers by 50 and 50 tests can take a long time on IEs;-)
-		config.browserNoActivityTimeout = 120000;
+		configuration.browserNoActivityTimeout = 120000;
 	}
 
     config.set(configuration);
