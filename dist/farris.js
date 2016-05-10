@@ -1,5 +1,5 @@
 /*!
- * farris v0.2.0
+ * farris v0.2.1
  * (c) 2016 KFlash
  * Released under the MIT License.
  */
@@ -9,8 +9,11 @@
 	(global.Farris = factory());
 }(this, function () { 'use strict';
 
-	var index = {}
+	var foo = {};
 
-	return index;
+	// Correct version will be set with the 'rollup-replace plugin'
+	foo.version = '0.2.1';
+
+	return foo;
 
 }));
