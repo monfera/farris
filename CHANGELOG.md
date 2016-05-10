@@ -1,3 +1,13 @@
+# 0.1.5
+
+- Rollup and Buble now works with the Karma test runner
+- Rollup and Buble used for bundling
+- added coverage report for the browser
+- added coverage report for the node environment
+- removed Gulp support
+- huge refactoring
+- updated dependencies
+
 # v.0.0.7
 
 - added in more gulp tasks
