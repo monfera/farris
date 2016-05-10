@@ -1,66 +1,105 @@
-var buble = require('rollup-plugin-buble');
-var nodeResolve = require('rollup-plugin-node-resolve');
-var typescript = require('rollup-plugin-typescript');
-var stub = require('rollup-plugin-stub');
-var multi = require('rollup-plugin-multi-entry').default;
+const buble = require('rollup-plugin-buble');
+const istanbul = require('rollup-plugin-istanbul');
 
-module.exports = function(config) {
-	config.set({
-		frameworks: ['mocha', 'sinon-chai'],
-
+/* global module */
+module.exports = function (config) {
+    const configuration = {
+		// base path that will be used to resolve all patterns (eg. files, exclude)
 		basePath: '../',
-
-		files: [
-			'test/browser-tests/**/*spec.browser.js',
-			'test/node-tests/**/*spec.node.js'
+		// frameworks to use
+		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+		frameworks: [
+			'sinon-chai',
+			'sinon',
+			'chai',
+			'mocha'
 		],
+		files: [
+			'test/browser-tests/**/*browser.js',
+			'test/node-tests/**/*node.js'
+		],
+		// Start these browsers, currently available:
+		// - Chrome
+		// - ChromeCanary
+		// - Firefox
+		// - Opera (has to be installed with `npm install karma-opera-launcher`)
+		// - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
+		// - PhantomJS
+		// - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
+		browsers: ['PhantomJS'],
+	    customLaunchers: {
+		    Chrome_travis_ci: {
+			    base: 'Chrome',
+			    flags: ['--no-sandbox']
+		    }
+	    },
 
+		// list of files to exclude
+		exclude: [],
 		preprocessors: {
 			'src/**/*.js': ['rollup'],
-			'test/browser-tests/**/*spec.browser.js': ['rollup'],
-			'test/node-tests/**/*spec.node.js': ['rollup']
+			'test/browser-tests/**/*browser.js': ['rollup'],
+			'test/node-tests/**/*node.js': ['rollup']
 		},
+	    rollupPreprocessor: {
+		    rollup: {
+			    plugins: [
+				    buble({
+					    exclude: 'node_modules/**'
+				    }),
+				    istanbul({
+					    exclude: ['test/**/*.js']
+				    })
+			    ]
+		    },
+		    bundle: {
+			    intro: '(function() {',
+			    outro: '})();',
+			    sourceMap: false
+		    }
+	    },
+		    coverageReporter: {
+			    reporters: [{
+				    type: 'html',
+				    dir: '../coverage'
+			    }, {
+				    type: 'text',
+				    dir: '../coverage'
+			    }, {
+				    type: 'lcov',
+				    dir: '../coverage'
+			    }]
+		    },
+	    // test results reporter to use
+		// possible values: 'dots', 'progress'
+		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
+	    reporters: ['mocha', 'coverage'],
 
-		rollupPreprocessor: {
-			rollup: {
-				plugins: [
-					multi(),
-					buble({}),
-					nodeResolve({
-						jsnext: true,
-						main: true
-					}),
-					stub(),
-					typescript()
-				]
-			},
-			bundle: {
-				intro: '(function() {',
-				outro: '})();',
-				sourceMap: 'inline'
-			}
-		},
-
-		reporters: ['mocha'],
-
-		port: 9876,
-		captureTimeout: 60000,
-		browserDisconnectTimeout : 60000,
-		browserDisconnectTolerance : 3,
-		browserNoActivityTimeout : 60000,
+	    browserDisconnectTimeout: 10000,
+		browserDisconnectTolerance: 2,
+		// concurrency level how many browser should be started simultaneously
+		concurrency: 4,
+		// If browser does not capture in given timeout [ms], kill it
+		captureTimeout: 100000,
+		browserNoActivityTimeout: 30000,
+		// enable / disable colors in the output (reporters and logs)
 		colors: true,
-
+		// level of logging
+		// possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
 		logLevel: config.LOG_INFO,
-
+		// enable / disable watching file and executing tests whenever any file changes
 		autoWatch: false,
+		// Continuous Integration mode
+		// if true, Karma captures browsers, runs the tests and exits
+		//singleRun: true
+	};
 
-		singleRun: true,
+	if (process.env.TRAVIS) {
+		config.browsers = ['Chrome_travis_ci'];
+		// Used by Travis to push coveralls info corretly to example coveralls.io
+		// Karma (with socket.io 1.x) buffers by 50 and 50 tests can take a long time on IEs;-)
+		config.browserNoActivityTimeout = 120000;
+	}
 
-		// change Karma's debug.html to the mocha web reporter
-		client: {
-			mocha: {
-				reporter: 'html'
-			}
-		}
-	});
+    config.set(configuration);
 };

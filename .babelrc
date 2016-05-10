@@ -1,6 +1,10 @@
 {
     'presets': [
-        'es2015'
+        'es2015',
+        'stage-0'
     ],
-    'plugins': []
+    'plugins': [
+        'transform-object-rest-spread',
+        'babel-plugin-syntax-jsx',
+    ]
 }

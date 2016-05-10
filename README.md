@@ -30,27 +30,25 @@ $ npm run build                 # Build a minified and a non-minified version of
 
 ... and boom! You have it all setup for you!
 
-## Gulp tasks
+## Workflow
 
-* `gulp build` - Build task that generates both minified and non-minified scripts
-* `gulp build:prod` - Build task that generate a minified script
-* `gulp build:dev` - Build task that generate a non-minified script
-* `gulp build:common` - Build task that generate a CommonJS bundle
-* `gulp lint:src` - Lint the source
-* `gulp lint:tests` - Lint the unit tests
-* `gulp lint:gulp` - Lint the gulp file
-* `gulp clean` - Remove the coverage report - and the *dist* folder
-* `gulp coverage` - Run Isparta, a code coverage tool
-* `gulp test` - Runs unit tests for both server and the browser
-* `gulp test:browser` - Runs the unit tests for browser
-* `gulp test:node` - Runs the unit tests on the server
-* `gulp karma:phantom` - Runs the unit tests for browser with PhantomJS
-* `gulp karma:chrome` - Runs the unit tests for browser with Chrome
-* `gulp watch:node` - Run all unit tests for server & watch files for changes
-* `gulp watch:browser` - Run all unit tests for browser & watch files for changes
-* `gulp watch:chrome` - Run all unit tests for browser with Chrome & watch files for changes
-* `gulp watch:phantom` - Run all unit tests for browser with PhantomJS & watch files for changes
-
+* `npm run build` - Build task that generates both minified and non-minified scripts
+* `npm run build:prod` - Build task that generate a minified script
+* `npm run build:dev` - Build task that generate a non-minified script
+* `npm run lint:src` - Lint the source
+* `npm run lint:tests` - Lint the unit tests
+* `npm run clean` - Remove the coverage report - and the *dist* folder
+* `npm run server:cov` - Run Isparta, a code coverage tool
+* `npm run test` - Runs unit tests for both server and the browser. With Karma as the test runner
+* `npm run test:browser` - Runs the unit tests for browser
+* `npm run test:chrome` - Runs the unit tests for browser with Chrome
+* `npm run test:node` - Runs the unit tests on the server
+* `npm run test:all` - Runs all unit tests
+* `npm run watch:node` - Run all unit tests for server and watch files for changes
+* `npm run watch:browser` - Run all unit tests for browser and watch files for changes
+* `npm run watch:chrome` - Run all unit tests for browser with Chrome and watch files for changes
+* `npm run dependencies:check` - Check for latest dependencies
+* `npm run dependencies:upgrade` - Upgrade latest dependencies
 
 ## Testing environment
 
@@ -73,6 +71,7 @@ To keep watching the common test suites that you are working on, simply do `gulp
 ## Coveralls
 
 This library is set up to integrate with Coveralls, and will automatically publish your coverage report to **coveralls.io** if you have created an account there.
+Coveralls reports are supported both for the browser through Karma, and for the node environment.
 
 ## Bublé
 
