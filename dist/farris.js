@@ -1,5 +1,5 @@
 /*!
- * farris v0.1.9
+ * farris v0.2.0
  * (c) 2016 KFlash
  * Released under the MIT License.
  */
