@@ -80,9 +80,16 @@ Read the Bublé documentation to get a better understanding about the difference
 
 [Rollup](http://rollupjs.org/) are used as the library bundler. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
 
-# Know limitations
+# Known limitations
 
 Babel have been used for browser tests because either Bublé or Node does support import / export. This will be fixed as soon as Node support import / export.
+
+# Known bugs
+
+- The `karma-rollup-preprocessor` published on NPM contains serious bugs. A workaround is to use the `karma-rollup-preprocessor` directly from the Github repo
+
+- Istanbul doesn't support direct export e.g. `export const A = 123;`. There is no workaround atm.
+
 
 # License
 
