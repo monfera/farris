@@ -82,7 +82,7 @@ Read the Bublé documentation to get a better understanding about the difference
 
 # Known limitations
 
-Babel have been used for browser tests because either Bublé or Node does support import / export. This will be fixed as soon as Node support import / export.
+Babel have been used for browser tests because Bublé and NodeJS doesn't support import / export.
 
 # Known bugs
 
