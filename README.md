@@ -72,17 +72,17 @@ Coverage reports are supported both for the browser through Karma, and for the n
 
 ## Bublé
 
-[Bublé](https://gitlab.com/Rich-Harris/buble) is a blazing fast, batteries-included ES2015 compiler. Used to bundle your ES2015 files instead of Babe, and also used for the browser testsl.
+[Bublé](https://gitlab.com/Rich-Harris/buble) is a blazing fast, batteries-included ES2015 compiler. Used to bundle your ES2015 files instead of Bable, and also used for the browser tests.
+
+Read the Bublé documentation to get a better understanding about the differences between Bublé and Babel.
 
 ## Rollup
 
-[Rollup](http://rollupjs.org/) are used as the library bundler, and also used together with Karma. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
+[Rollup](http://rollupjs.org/) are used as the library bundler. It bundle down to a cleaner and more lightweight bundle then what you get with for example Webpack and Browserify.
 
 # Know limitations
 
-Bublé doesn't support import / export. Therefor Babel have been used for the nodeJS tests. This will be fixed ASAP when nodejS supports import / export.
-
-I suggest read the Bublé documentation to get a better understanding about the differences between Bublé and Babel.
+Babel have been used for browser tests because either Bublé or Node does support import / export. This will be fixed as soon as Node support import / export.
 
 # License
 
