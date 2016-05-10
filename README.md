@@ -1,9 +1,11 @@
-### ES2015 boilerplate for creating libraries with Buble, Rollup and the newest front-end technologies.
+### ES2015 boilerplate for creating libraries with Bublé
 
 [![Build Status](https://travis-ci.org/Kflash/farris.svg?branch=master)](https://travis-ci.org/Kflash/farris)
 [![Circle CI](https://circleci.com/gh/Kflash/farris/tree/master.svg?style=svg)](https://circleci.com/gh/Kflash/farris/tree/master)
 [![npm version](https://badge.fury.io/js/farris.svg)](https://badge.fury.io/js/farris)
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://github.com/kflash/farris/blob/master/LICENSE.md)
+
+> A starter kit to get you up and running with a bunch of awesome new front-end technologies using Bublé as the ES2015 compiler
 
 ## Features
 
@@ -12,6 +14,7 @@
 * [Eslint](http://eslint.org/) to maintain a consistent code style
 * [Karma](http://karma-runner.github.io/0.13/index.html) as the test runner
 * [ES6 with Babel](http://babeljs.io/) for Mocha tests
+* [Universal Module Definition (UMD) API](https://github.com/umdjs/umd), which provides compatibility with the most popular script loaders, to the output.
 * [Sinon.JS](http://sinonjs.org/) with examples for test doubles
 * Node >= 6.x
 
@@ -30,23 +33,23 @@ $ npm run build                 # Build a minified and a non-minified version of
 
 ## Workflow
 
-* `npm run build` - Build task that generates both minified and non-minified scripts
-* `npm run build:prod` - Build task that generate a minified script
-* `npm run build:dev` - Build task that generate a non-minified script
-* `npm run lint:src` - Lint the source
-* `npm run lint:tests` - Lint the unit tests
-* `npm run clean` - Remove the coverage report - and the *dist* folder
-* `npm run server:cov` - Run Isparta, a code coverage tool
-* `npm run test` - Runs unit tests for both server and the browser. With Karma as the test runner
-* `npm run test:browser` - Runs the unit tests for browser
-* `npm run test:chrome` - Runs the unit tests for browser with Chrome
-* `npm run test:node` - Runs the unit tests on the server
-* `npm run test:all` - Runs all unit tests
-* `npm run watch:node` - Run all unit tests for server and watch files for changes
-* `npm run watch:browser` - Run all unit tests for browser and watch files for changes
-* `npm run watch:chrome` - Run all unit tests for browser with Chrome and watch files for changes
-* `npm run dependencies:check` - Check for latest dependencies
-* `npm run dependencies:upgrade` - Upgrade latest dependencies
+* `npm run build` - build task that generate a minified and a non-minified script
+* `npm run build:prod` - build task that generate a production bundle
+* `npm run build:dev` - build task that generate a development bundle
+* `npm run lint:src` - lint the source
+* `npm run lint:tests` - lint the unit tests
+* `npm run clean` - remove the coverage report - and the *dist* folder
+* `npm run server:cov` - run Isparta, a code coverage tool
+* `npm run test` - runs unit tests for both node and the browser. With Karma as the test runner
+* `npm run test:browser` - runs the unit tests for browser
+* `npm run test:chrome` - runs the unit tests for browser with Chrome
+* `npm run test:node` - runs the unit tests in the node environment
+* `npm run test:all` - runs all unit tests
+* `npm run watch:node` - run all unit tests for server and watch files for changes
+* `npm run watch:browser` - run all unit tests for browser and watch files for changes
+* `npm run watch:chrome` - run all unit tests for browser with Chrome and watch files for changes
+* `npm run dependencies:check` - shows a list over dependencies with a higher version number then the current one - if any
+* `npm run dependencies:upgrade` - automatically upgrade all devDependencies & dependencies, and update package.json
 
 ## Testing environment
 
