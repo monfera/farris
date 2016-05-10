@@ -10,14 +10,10 @@ cache:
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
       - google-chrome
     packages:
       - google-chrome-stable
       - google-chrome-beta
-env:
- - CXX=g++-4.8
- - g++-4.8
 before_install:
   - "nvm use $TRAVIS_NODE_VERSION"
 
@@ -32,7 +28,6 @@ install:
   - npm config set loglevel http
   # Install npm dependencies and ensure that npm cache is not stale
   - npm install
-  - if [[ $TRAVIS_OS_NAME == "linux" ]]; then export CXX=g++-4.8; fi
 
 before_script:
   - "export DISPLAY=:99.0"

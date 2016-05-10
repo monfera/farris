@@ -45,6 +45,7 @@ Promise.resolve(rollup({
 			commonJS(),
 			replace({
 				'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+				VERSION: pack.version
 			})
 		]
 	}))
