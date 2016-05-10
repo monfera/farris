@@ -5,7 +5,7 @@ const istanbul = require('rollup-plugin-istanbul');
 module.exports = function (config) {
     const configuration = {
 		// base path that will be used to resolve all patterns (eg. files, exclude)
-		basePath: '../',
+		basePath: '..',
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
 		frameworks: [
@@ -57,18 +57,25 @@ module.exports = function (config) {
 			    sourceMap: false
 		    }
 	    },
-		    coverageReporter: {
-			    reporters: [{
-				    type: 'html',
-				    dir: '../coverage'
-			    }, {
-				    type: 'text',
-				    dir: '../coverage'
-			    }, {
-				    type: 'lcov',
-				    dir: '../coverage'
-			    }]
+	    mochaReporter: {
+		    colors: {
+			    success: 'green',
+			    info: 'bgYellow',
+			    warning: 'cyan',
+			    error: 'bgRed'
 		    },
+		    divider: ''
+	    },
+	    coverageReporter: {
+		    // Would output the results into: .'/coverage'
+		    reporters: [{
+			    type: 'html'
+		    }, {
+			    type: 'text'
+		    }, {
+			    type: 'lcov'
+		    }]
+	    },
 	    // test results reporter to use
 		// possible values: 'dots', 'progress'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
