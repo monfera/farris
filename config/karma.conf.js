@@ -67,13 +67,15 @@ module.exports = function (config) {
 		    divider: ''
 	    },
 	    coverageReporter: {
-		    // Would output the results into: .'/coverage'
 		    reporters: [{
-			    type: 'html'
+			    type: 'html',
+			    dir: '../coverage'
 		    }, {
-			    type: 'text'
+			    type: 'text',
+			    dir: '../coverage'
 		    }, {
-			    type: 'lcov'
+			    type: 'lcov',
+			    dir: '../coverage'
 		    }]
 	    },
 	    // test results reporter to use
@@ -109,6 +111,5 @@ module.exports = function (config) {
 		// Karma (with socket.io 1.x) buffers by 50 and 50 tests can take a long time on IEs;-)
 		configuration.browserNoActivityTimeout = 120000;
 	}
-
     config.set(configuration);
 };
