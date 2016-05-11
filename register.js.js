@@ -1,12 +1,12 @@
-var fs = require( 'fs' );
-var path = require( 'path' );
-var buble = require( './' );
+const fs = require( 'fs' );
+const path = require( 'path' );
+const buble = require( './' );
 
-var original = require.extensions[ '.js' ];
-var nodeModulesPattern = path.sep === '/' ? /\/node_modules\// : /\\node_modules\\/;
+const original = require.extensions[ '.js' ];
+const nodeModulesPattern = path.sep === '/' ? /\/node_modules\// : /\\node_modules\\/;
 
-var nodeVersion = /(?:0\.)?\d+/.exec( process.version )[0];
-var versions = [ '0.10', '0.12', '4', '5', '6' ];
+let nodeVersion = (/(?:0\.)?\d+/).exec( process.version )[0];
+const versions = [ '0.10', '0.12', '4', '5', '6' ];
 
 if ( !~versions.indexOf( nodeVersion ) ) {
 	if ( +nodeVersion > 6 ) {
@@ -16,25 +16,27 @@ if ( !~versions.indexOf( nodeVersion ) ) {
 	}
 }
 
-var options = {
+const options = {
 	target: {
 		node: nodeVersion
 	}
 };
 
-require.extensions[ '.js' ] = function ( m, filename ) {
-	if ( nodeModulesPattern.test( filename ) ) return original( m, filename );
+require.extensions[ '.js' ] = function( m, filename ) {
+	if ( nodeModulesPattern.test( filename ) ) {
+		return original( m, filename );
+	}
 
-	var source = fs.readFileSync( filename, 'utf-8' );
+	const source = fs.readFileSync( filename, 'utf-8' );
 
 	try {
-		var compiled = buble.transform( source, options );
+		buble.transform( source, options );
 	} catch ( err ) {
 		if ( err.snippet ) {
 			console.log( 'Error compiling ' + filename + ':\n---' );
 			console.log( err.snippet );
 			console.log( err.message );
-			console.log( '' )
+			console.log( '' );
 			process.exit( 1 );
 		}
 

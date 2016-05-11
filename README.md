@@ -75,7 +75,7 @@ Coverage report is supported both for Karma and the `Node.js environment` (*Moch
 
 [Bublé](https://gitlab.com/Rich-Harris/buble) is a blazing fast, batteries-included ES2015 compiler. Used to bundle your ES2015 files instead of Bable, and also used for the browser tests.
 
-Read the Bublé documentation to get a better understanding about the differences between Bublé and Babel.
+Read the Bublé documentation to get a better understanding about the differences between Bublé and Bable.
 
 ## Rollup
 
