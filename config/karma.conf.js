@@ -28,7 +28,7 @@ module.exports = function (config) {
 		// - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
 		browsers: ['Chrome'],
 	    customLaunchers: {
-		    Chrome_travis_ci: {
+		    ChromeTravisCi: {
 			    base: 'Chrome',
 			    flags: ['--no-sandbox']
 		    }
@@ -56,15 +56,6 @@ module.exports = function (config) {
 			    outro: '})();',
 			    sourceMap: false
 		    }
-	    },
-	    mochaReporter: {
-		    colors: {
-			    success: 'green',
-			    info: 'bgYellow',
-			    warning: 'cyan',
-			    error: 'bgRed'
-		    },
-		    divider: ''
 	    },
 	    coverageReporter: {
 		    reporters: [{
@@ -107,7 +98,7 @@ module.exports = function (config) {
 		// Used by Travis to push coveralls info corretly to example coveralls.io
 		configuration.reporters = ['mocha', 'coverage', 'coveralls'];
 		// Use Chrome as default browser for Travis CIs
-		configuration.browsers = ['Chrome_travis_ci'];
+		configuration.browsers = ['ChromeTravisCi'];
 		// Karma (with socket.io 1.x) buffers by 50 and 50 tests can take a long time on IEs;-)
 		configuration.browserNoActivityTimeout = 120000;
 	}

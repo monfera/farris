@@ -29,8 +29,7 @@ Promise.resolve(rollup({
 					dead_code: true,
 					unused: true,
 					keep_fargs: false,
-					drop_debugger: true,
-					booleans: true // various optimizations for boolean context, for example !!a ? b : c → a ? b : c
+					drop_debugger: true
 				},
 				mangle: {
 					screw_ie8: true
