@@ -94,7 +94,16 @@ Babel have been used for browser tests because Bublé and NodeJS doesn't support
 
 - The `karma-rollup-preprocessor` published on NPM contains serious bugs. A workaround is to use the `karma-rollup-preprocessor` directly from the Github repo
 
-- Istanbul doesn't support direct export e.g. `export const A = 123;`. There is no workaround atm.
+- Istanbul doesn't support direct export e.g. `export const A = 123;`. There is no workaround at the moment, unless you do:
+- 
+```js
+
+const foo = {
+        a: 123
+}
+export default foo; // export foo; Note! export const foo = {} give issues too.
+
+```
 
 # FAQ
 
@@ -113,11 +122,11 @@ There are too many to mention them all, but a few benefits are:
 - JSX
 - Import and export.
 
-Too mention a few. I suggest your read the Bublé documentation.
+Too mention a few. I suggest you read the Bublé documentation.
 
 ## Is there any CI support for Bublé?
 
-Yes, there is. Read the documentation.
+Yes, there is.
 
 # License
 
