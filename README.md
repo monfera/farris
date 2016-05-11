@@ -113,7 +113,7 @@ export default foo; // export foo; Note! export const foo = {} give issues too.
 
 ## What is the benefits of using Bublé instead of Babel?
 
-There are too many to mention them all, but a few benefits are:
+There are too many to mention them all, but here is a few of them:
 
 - There are no plugins or presets – less extensibility, but also zero configuration
 - no need for Babel helpers
@@ -121,13 +121,12 @@ There are too many to mention them all, but a few benefits are:
 - Bublé limits itself to ES2015 that can be transpiled to compact, performant ES5
 - It's comparatively tiny and many times faster
 
-## Any features not supported with Bublé?
+## Any "*important*" features not supported with Bublé?
+
+It all depend on your use case. But to mention a few:
 
 - JSX
 - Doesn't support [`import and export statements`](https://buble.surge.sh/guide/#using-es-modules)
-
-
-Too mention a few. I suggest you read the Bublé documentation.
 
 ## Is there any CI support for Bublé?
 
