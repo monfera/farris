@@ -96,9 +96,9 @@ Babel have been used for browser tests because Bublé and NodeJS doesn't support
 
 - Istanbul doesn't support direct export e.g. `export const A = 123;`. There is no workaround atm.
 
-## FAQ
+# FAQ
 
-# What is the benefits of using Bublé instead of Babel?
+## What is the benefits of using Bublé instead of Babel?
 
 There are too many to mention them all, but a few benefits are:
 
@@ -108,12 +108,12 @@ There are too many to mention them all, but a few benefits are:
 - Bublé limits itself to ES2015 that can be transpiled to compact, performant ES5
 - It's comparatively tiny and many times faster
 
-# Any features not supported with Bublé?
+## Any features not supported with Bublé?
 
 - JSX
 - Import and export.
 
-# Is there any CI support for Bublé?
+## Is there any CI support for Bublé?
 
 Yes, there is. Read the documentation.
 
