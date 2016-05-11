@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
