@@ -89,6 +89,7 @@ Read the Bublé documentation to get a better understanding about the difference
 # Known limitations
 
 Babel have been used for browser tests because Bublé and NodeJS doesn't support [`import and export statements`](https://buble.surge.sh/guide/#using-es-modules).
+This is more a limitation related to `node.js` then Bublé.
 
 if you're only targeting a `Node.js environment`, and don't want to bundle your modules, you should continue to use `require and exports` if you don't want to use the
 `Babel workaround` this boilerplate offer.
@@ -111,9 +112,9 @@ export default foo; // export foo; Note! export const foo = {} give issues too.
 
 # FAQ
 
-## What is the benefits of using Bublé instead of Babel?
+## What are the benefits of using Bublé instead of Babel?
 
-There are too many to mention them all, but here is a few of them:
+There are too many of them to be able to mention them all. To name a few:
 
 - There are no plugins or presets – less extensibility, but also zero configuration
 - no need for Babel helpers
@@ -121,9 +122,9 @@ There are too many to mention them all, but here is a few of them:
 - Bublé limits itself to ES2015 that can be transpiled to compact, performant ES5
 - It's comparatively tiny and many times faster
 
-## Any "*important*" features not supported with Bublé?
+## Any "*important*" features not supported by Bublé?
 
-It all depend on your use case. But to mention a few:
+It depends entirely on your application. To name a few:
 
 - JSX
 - Doesn't support [`import and export statements`](https://buble.surge.sh/guide/#using-es-modules)
