@@ -113,11 +113,11 @@ There are too many to mention them all, but a few benefits are:
 - JSX
 - Import and export.
 
+Too mention a few. I suggest your read the Bublé documentation.
+
 ## Is there any CI support for Bublé?
 
 Yes, there is. Read the documentation.
-
-Too mention a few. I suggest your read the Bublé documentation.
 
 # License
 
