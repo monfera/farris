@@ -93,7 +93,6 @@ If you're targeting browsers instead of (or as well as) `Node.js`, this is not a
 
 # Known bugs
 
-- The `karma-rollup-preprocessor` published on `NPM` contains serious bugs. A workaround is to use the `karma-rollup-preprocessor` directly from the Github repo.
 - Istanbul doesn't support direct export e.g. `export const A = 123;`. There is no workaround at the moment, unless you do:
 
 ```js

@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
@@ -90,7 +90,7 @@
     "karma-mocha": "^1.0.1",
     "karma-mocha-reporter": "^2.0.2",
     "karma-phantomjs-launcher": "^1.0.0",
-    "karma-rollup-preprocessor": "github:ulrik59/karma-rollup-preprocessor",
+    "karma-rollup-preprocessor": "^2.0.2",
     "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^1.2.0",
     "karma-coverage": "^1.0.0",
