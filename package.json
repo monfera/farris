@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
@@ -56,7 +56,7 @@
     "watch:browser": "./node_modules/.bin/karma start config/karma.conf.js --auto-watch",
     "watch:chrome": "./node_modules/.bin/karma start config/karma.conf.js --browsers=Chrome --auto-watch",
     "watch:node": "npm run test:node -- -w --check-leaks --reporter min",
-    "node:cov": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report text --report html --report lcovonly -- -R spec --recursive test/node-tests/**/*node.js --opts config/mocha.opts",
+    "node:cov": "babel-node node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha --report text --report html --report lcovonly -- -R spec --recursive test/node-tests/**/*node.js --opts config/mocha.opts",
     "lint": "npm run lint:src && npm run lint:test",
     "lint:src": "eslint --quiet src/**/*.js",
     "lint:test": "eslint --quiet test/**/*.js",
