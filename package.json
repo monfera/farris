@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
@@ -128,7 +128,7 @@
       "post-commit": "git status",
       "pre-push": [
         "rm -rf node_modules",
-        "npm install",
+        "npm install"
       ],
       "post-checkout": "npm install",
       "post-merge": "npm install"
