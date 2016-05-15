@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
@@ -57,6 +57,7 @@
     "watch:chrome": "./node_modules/.bin/karma start config/karma.conf.js --browsers=Chrome --auto-watch",
     "watch:node": "npm run test:node -- -w --check-leaks --reporter min",
     "node:cov": "babel-node ./node_modules/babel-istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report text --report html --report lcovonly -- -R spec --recursive test/node-tests/**/*node.js --require ./config/dom.js",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "lint": "npm run lint:src && npm run lint:test",
     "lint:src": "eslint --quiet src/**/*.js",
     "lint:test": "eslint --quiet test/**/*.js",
@@ -111,12 +112,12 @@
     "rollup-plugin-replace": "^1.1.0",
     "rollup-plugin-uglify": "^0.3.1",
     "rollup-plugin-commonjs": "^2.2.1",
-    "rollup-plugin-buble": "^0.7.0",
+    "rollup-plugin-buble": "^0.8.0",
     "rollup-plugin-istanbul": "^1.0.0",
     "rollup-plugin-typescript": "^0.7.5",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
-    "buble": "^0.7.1"
+    "buble": "^0.8.2"
   },
   "config": {
     "pre-git": {
