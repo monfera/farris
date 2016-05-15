@@ -1,6 +1,6 @@
 {
   "name": "farris",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "ES2015 boilerplate for creating libraries with Bublé",
   "license": "MIT",
   "author": {
@@ -116,7 +116,7 @@
     "rollup-plugin-typescript": "^0.7.5",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
-    "buble": "^0.7.0"
+    "buble": "^0.7.1"
   },
   "config": {
     "pre-git": {
