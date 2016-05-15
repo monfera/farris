@@ -1,10 +1,14 @@
-# 0.2.1
+# v. 0.3.8
+
+- replaced Isparta with babel-istanbul.
+
+# v. 0.2.1
 
 - Fixed issues with Travis
 - updated dependencies
 - added support for typeScript (TS)
 
-# 0.1.5
+#  v. 0.1.5
 
 - Rollup and Buble now works with the Karma test runner
 - Rollup and Buble used for bundling
