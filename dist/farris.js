@@ -1,5 +1,5 @@
 /*!
- * farris v0.4.1
+ * farris v0.4.3
  * (c) 2016 KFlash
  * Released under the MIT License.
  */
@@ -12,7 +12,7 @@
 	var foo = {};
 
 	// Correct version will be set with the 'rollup-replace plugin'
-	foo.version = '0.4.1';
+	foo.version = '0.4.3';
 
 	return foo;
 
